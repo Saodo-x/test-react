@@ -1,6 +1,6 @@
-import React from 'react'
 
-class Reservation extends React.component {
+
+class Reservation extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -55,18 +55,22 @@ class Reservation extends React.component {
                         value={this.state.numberOfGuests}
                         onChange={this.handleChange} />
                 </label>
+                <br />
                 <label>
                     名字:
                     <input type="text" name='txt' value={this.state.inputTxt} onChange={this.handleChange} />
                 </label>
+                <br />
                 <label>
                     文章:
                     <textarea value={this.state.texts} name='text' onChange={this.handleChange} />
                 </label>
+                <br />
                 <label>
                     选择你喜欢的风味:
                     <NumList value={this.state.value} onChange={this.handleChange}/>
                 </label>
+                <br />
                 <input type="submit" value="提交" />
             </form>
         )
@@ -88,5 +92,7 @@ function NumList (props){
     )
 }
 
-const root = ReactDOM.createRoot(document.getElementById('root'))
-root.render(<Reservation/>)
+ReactDOM.render(
+    <Reservation/>,
+    document.getElementById('root')
+)
