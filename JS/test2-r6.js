@@ -27,7 +27,7 @@ function BoilingVerdict (props){
     if (props.celsius >= 100){
         return <p>The water would boil.</p>
     }
-    return <p>The water would not boil.</p>;
+    return <p>The water would not boil.</p>
 }
 
 class TemperatureInput  extends React.Component {
@@ -46,7 +46,7 @@ class TemperatureInput  extends React.Component {
         const scale = this.props.scale
         return (
             <fieldset>
-                <legend>Enter temperature in {scaleNames[scale]}:</legend>
+                <legend>Enter temperature in {scaleName[scale]}:</legend>
                 <input
                     value={temperature}
                     onChange={this.handleChange}
